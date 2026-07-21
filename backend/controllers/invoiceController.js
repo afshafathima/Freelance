@@ -555,6 +555,7 @@ export const generateFromTimeLogs = async (
             }
         );
 
+        
         const invoice = await Invoice.create({
             userId,
             clientId,

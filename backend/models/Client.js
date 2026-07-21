@@ -9,10 +9,15 @@ const clientSchema = new mongoose.Schema({
     required: true
   },
 
+
+
+
   name: {
     type: String,
     required: true
   },
+
+
 
 
   email: {
@@ -20,15 +25,19 @@ const clientSchema = new mongoose.Schema({
   },
 
 
+
   phone: {
     type: String
   },
+
 
 
   hourlyRate: {
     type: Number,
     default: 0
   },
+
+  
   clientName: {
     type: String
   }

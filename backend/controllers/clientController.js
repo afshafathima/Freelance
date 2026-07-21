@@ -10,6 +10,8 @@ export const createClient = async (req, res) => {
             hourlyRate
         } = req.body;
 
+
+
         const client = await Client.create({
             userId: req.user._id,
             name,
@@ -18,10 +20,14 @@ export const createClient = async (req, res) => {
             hourlyRate
         });
 
+
+
         res.status(201).json({
             message: "Client created successfully",
             client
         });
+
+
     } catch (error) {
         console.log(error);
         res.status(500).json({
@@ -29,6 +35,8 @@ export const createClient = async (req, res) => {
         });
     }
 };
+
+
 
 export const getClients = async (req, res) => {
     try {
@@ -40,6 +48,7 @@ export const getClients = async (req, res) => {
         });
     }
 };
+
 
 // UPDATE CLIENT
 export const updateClient = async (req, res) => {
